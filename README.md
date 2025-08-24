@@ -1,177 +1,199 @@
-# Couples Meeting Tracker
+# Couples Tracker App
 
-A beautiful React web app for couples to track their meetings and special moments together. Built with Firebase authentication and a modern, mobile-friendly design.
+A comprehensive relationship management application built with React, Firebase, and modern web technologies. This app helps couples stay connected, organized, and focused on their relationship goals.
 
-## Features
+## 🌟 Features
 
-- 🔐 Google Sign-in authentication
-- 📱 Mobile-friendly responsive design
-- 🎨 Clean, modern UI with warm colors
-- 📊 Dashboard with user profile
-- ⏱️ Start Meeting functionality (placeholder)
-- 🔒 Protected routes
+### Core Relationship Management
+- **Partner Invitation System** - Invite your partner to join your relationship workspace
+- **Shared Dashboard** - Real-time shared dashboard for both partners
+- **Couple Profile Management** - Manage your couple's information and settings
 
-## Tech Stack
+### Task & Goal Management
+- **Rocks Manager** - Track and manage important relationship goals (Rocks)
+- **Todos Manager** - Shared todo lists and task management
+- **Issues Manager** - Track and resolve relationship issues together
 
-- **Frontend**: React 18, React Router
-- **Styling**: Tailwind CSS
-- **Authentication**: Firebase Auth
-- **Database**: Firestore (ready for future use)
-- **Icons**: Lucide React
+### Meeting & Communication
+- **Weekly Meetings** - Schedule and manage regular relationship check-ins
+- **Meeting Flow** - Structured meeting process with agenda and timer
+- **Meeting Agenda** - Collaborative agenda creation and management
 
-## Setup Instructions
+### Quality of Life Tracking
+- **Quality of Life Dashboard** - Track and visualize relationship satisfaction metrics
+- **Recent Activity** - Monitor shared activities and progress
 
-### 1. Install Dependencies
+### Communication & Notifications
+- **Email Notifications** - Automated email system for invitations, reminders, and updates
+- **In-App Notifications** - Real-time notifications for important events
+- **Partner Communication** - Direct messaging and notification system
 
-```bash
-npm install
-```
+## 🚀 Getting Started
 
-### 2. Firebase Setup
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- Firebase account
+- SendGrid account (for email functionality)
 
-#### Step 1: Create a Firebase Project
+### Installation
 
-1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Click "Create a project" or "Add project"
-3. Enter a project name (e.g., "couples-meeting-tracker")
-4. Choose whether to enable Google Analytics (optional)
-5. Click "Create project"
-
-#### Step 2: Enable Authentication
-
-1. In your Firebase project, go to "Authentication" in the left sidebar
-2. Click "Get started"
-3. Go to the "Sign-in method" tab
-4. Click on "Google" provider
-5. Enable it and add your authorized domain (localhost for development)
-6. Click "Save"
-
-#### Step 3: Create a Web App
-
-1. In your Firebase project, click the gear icon next to "Project Overview"
-2. Select "Project settings"
-3. Scroll down to "Your apps" section
-4. Click the web icon (</>) to add a web app
-5. Enter an app nickname (e.g., "Couples Tracker Web")
-6. Click "Register app"
-7. Copy the Firebase configuration object
-
-#### Step 4: Update Firebase Config
-
-1. Open `src/firebase/config.js`
-2. Replace the placeholder values with your actual Firebase configuration:
-
-```javascript
-const firebaseConfig = {
-  apiKey: "your-actual-api-key",
-  authDomain: "your-project-id.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project-id.appspot.com",
-  messagingSenderId: "your-messaging-sender-id",
-  appId: "your-app-id"
-};
-```
-
-### 3. Run the Application
-
-```bash
-npm start
-```
-
-The app will open at `http://localhost:3000`
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── LandingPage.js    # Landing page with Google sign-in
-│   └── Dashboard.js      # Main dashboard after login
-├── contexts/
-│   └── AuthContext.js    # Authentication context
-├── firebase/
-│   └── config.js         # Firebase configuration
-├── App.js               # Main app component with routing
-├── App.css              # Global styles
-├── index.js             # App entry point
-└── index.css            # Base styles
-```
-
-## Features Overview
-
-### Landing Page
-- Beautiful gradient background
-- Google Sign-in button
-- Feature highlights
-- Mobile-responsive design
-
-### Dashboard
-- User profile display
-- Welcome message with user's name
-- Start Meeting button (placeholder)
-- Statistics cards (placeholder)
-- Sign out functionality
-
-### Authentication
-- Google Sign-in integration
-- Protected routes
-- Automatic redirects
-- User state management
-
-## Future Enhancements
-
-- Meeting timer functionality
-- Meeting history tracking
-- Notes and memories for each meeting
-- Calendar integration
-- Push notifications
-- Meeting statistics and insights
-
-## Development
-
-### Available Scripts
-
-- `npm start` - Runs the app in development mode
-- `npm build` - Builds the app for production
-- `npm test` - Runs the test suite
-- `npm eject` - Ejects from Create React App (not recommended)
-
-### Environment Variables
-
-For production, you may want to move Firebase config to environment variables:
-
-1. Create a `.env` file in the root directory
-2. Add your Firebase config:
-
-```
-REACT_APP_FIREBASE_API_KEY=your-api-key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your-project-id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-REACT_APP_FIREBASE_APP_ID=your-app-id
-```
-
-3. Update `src/firebase/config.js` to use environment variables
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Firebase config errors**: Make sure you've replaced all placeholder values in `src/firebase/config.js`
-
-2. **Authentication not working**: 
-   - Verify Google provider is enabled in Firebase Console
-   - Check that your domain is authorized in Firebase Console
-
-3. **Styling issues**: Make sure Tailwind CSS is properly installed and configured
-
-4. **Build errors**: Try clearing node_modules and reinstalling:
+1. **Clone the repository**
    ```bash
-   rm -rf node_modules package-lock.json
-   npm install
+   git clone <repository-url>
+   cd SaraIvanEOSApp
    ```
 
-## License
+2. **Install dependencies**
+   ```bash
+   npm install
+   cd functions
+   npm install
+   cd ..
+   ```
 
-MIT License - feel free to use this project for your own purposes!
+3. **Firebase Setup**
+   - Create a new Firebase project
+   - Enable Authentication, Firestore, and Functions
+   - Configure SendGrid extension for email functionality
+   - Update Firebase configuration in `src/firebase/config.js`
+
+4. **Environment Configuration**
+   - Set up Firebase Functions configuration:
+     ```bash
+     firebase functions:config:set app.url="https://your-app-domain.com"
+     firebase functions:config:set app.accept_url="https://your-app-domain.com/accept-invite"
+     ```
+
+5. **Deploy Firebase Functions**
+   ```bash
+   firebase deploy --only functions
+   ```
+
+6. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+## 📱 Usage
+
+### For New Users
+1. Sign up with email or Google account
+2. Complete your profile setup
+3. Invite your partner using their email address
+4. Your partner will receive an invitation email
+5. Partner accepts invitation and creates their account
+6. Both partners are now connected and can share data
+
+### For Partners
+1. Click the invitation link in your email
+2. Review the invitation details
+3. Accept or decline the invitation
+4. If accepting, create your account with the invited email
+5. Start using the shared features together
+
+## 🏗️ Architecture
+
+### Frontend
+- **React 18** - Modern React with hooks and functional components
+- **React Router** - Client-side routing
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Beautiful icons
+- **Firebase SDK** - Real-time database and authentication
+
+### Backend
+- **Firebase Functions** - Serverless backend functions
+- **Firestore** - NoSQL database for real-time data
+- **Firebase Authentication** - User authentication and management
+- **SendGrid** - Email delivery service
+
+### Key Components
+- **AuthContext** - Authentication state management
+- **NotificationContext** - In-app notification system
+- **EmailService** - Email functionality integration
+- **Partner Invitation System** - Complete invitation workflow
+
+## 📧 Email System
+
+The app includes a comprehensive email notification system:
+
+- **Welcome Emails** - Sent to new users upon signup
+- **Partner Invitations** - Email invitations with secure links
+- **Invitation Status Updates** - Notifications for acceptance/decline
+- **Meeting Reminders** - Automated meeting notifications
+- **Todo Notifications** - Task assignment and updates
+- **General Notifications** - Custom notification system
+
+## 🔧 Configuration
+
+### Firebase Functions Configuration
+```bash
+# Set app URLs
+firebase functions:config:set app.url="https://your-app-domain.com"
+firebase functions:config:set app.accept_url="https://your-app-domain.com/accept-invite"
+
+# Set email configuration
+firebase functions:config:set mail.from="your-email@domain.com"
+firebase functions:config:set mail.reply_to="your-email@domain.com"
+```
+
+### SendGrid Setup
+1. Install SendGrid extension in Firebase
+2. Configure SendGrid API key
+3. Set up email templates and sending rules
+
+## 🚀 Deployment
+
+### Firebase Hosting
+```bash
+npm run build
+firebase deploy --only hosting
+```
+
+### Firebase Functions
+```bash
+firebase deploy --only functions
+```
+
+## 📁 Project Structure
+
+```
+SaraIvanEOSApp/
+├── src/
+│   ├── components/          # React components
+│   ├── contexts/           # React contexts
+│   ├── services/           # Service layer
+│   ├── firebase/           # Firebase configuration
+│   └── App.js              # Main application
+├── functions/              # Firebase Functions
+├── public/                 # Static assets
+└── README.md              # This file
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+For support and questions:
+- Check the documentation in the `/docs` folder
+- Review the Firebase console for function logs
+- Check the browser console for frontend errors
+
+## 🔮 Future Features
+
+- Mobile app development
+- Advanced analytics and insights
+- Integration with calendar systems
+- Voice and video communication
+- Relationship coaching features
+- Advanced privacy controls
