@@ -2,6 +2,8 @@
 
 A comprehensive relationship management application built with React, Firebase, and modern web technologies. This app helps couples stay connected, organized, and focused on their relationship goals.
 
+**🚀 Live App: https://couples-tracker.vercel.app**
+
 ## 🌟 Features
 
 ### Core Relationship Management
