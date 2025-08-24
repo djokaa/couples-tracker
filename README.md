@@ -40,8 +40,8 @@ A comprehensive relationship management application built with React, Firebase, 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd SaraIvanEOSApp
+   git clone https://github.com/djokaa/couples-tracker.git
+   cd couples-tracker
    ```
 
 2. **Install dependencies**
@@ -158,7 +158,7 @@ firebase deploy --only functions
 ## 📁 Project Structure
 
 ```
-SaraIvanEOSApp/
+couples-tracker/
 ├── src/
 │   ├── components/          # React components
 │   ├── contexts/           # React contexts
